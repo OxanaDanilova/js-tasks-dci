@@ -83,3 +83,41 @@ console.log("---------------task3--------------");
 const getNames = (arr) => arr.map((el) => el.name);
 
 console.log(getNames([{ name: "Jane" }, { name: "Jack" }, { name: "John" }]));
+
+//////////////scrubble////////
+
+// Scrabble. Write a program that, given an array of scrabble tiles, counts the maximum score that a player can earn from the tiles in their hand.
+// Example:
+// [ { tile: "N", score: 1 }, { tile: "K", score: 5 }, { tile: "Z", score: 10 }, { tile: "X", score: 8 }, { tile: "D", score: 2 }, { tile: "A", score: 1 }, { tile: "E", score: 1 } ]
+const scrabble = [
+  { tile: "N", score: 1 },
+  { tile: "K", score: 5 },
+  { tile: "Z", score: 10 },
+  { tile: "X", score: 8 },
+  { tile: "D", score: 2 },
+  { tile: "A", score: 1 },
+  { tile: "E", score: 1 },
+];
+
+///
+const checkScrab = (arr) => {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i].score; /// sum = sum + arr[i].score
+  }
+  return console.log("Summe: ", sum);
+};
+
+const checkScrab2 = (arr) => {
+  console.log(
+    "Summe: ",
+    arr.map((el) => el.score).reduce((a, b) => a + b, 0)
+  );
+};
+
+checkScrab(scrabble);
+console.log("-----------task5--var2--------------");
+checkScrab2(scrabble);
+
+const check2 = (arr) => arr.reduce((acc, cur) => acc + cur.score, 0);
+console.log(check2(scrabble));
