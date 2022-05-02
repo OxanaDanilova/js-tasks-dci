@@ -39,6 +39,19 @@ var library = [
     libraryID: 3245,
   },
 ];
+const sortedLib = library.sort(function (a, b) {
+  if (a.title > b.title) {
+    return 1;
+  }
+  if (a.title < b.title) {
+    return -1;
+  }
+  // a должно быть равным b
+  return 0;
+});
+
+console.log(sortedLib);
+
 //sorted
 /*/* {
       author: "Suzanne Collins",
