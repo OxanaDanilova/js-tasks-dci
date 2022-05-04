@@ -105,6 +105,10 @@ console.log(numOfDigits2(90)); // 2
 console.log(numOfDigits2(1305981031)); //10
 console.log(numOfDigits2(0)); //1
 
+console.log();
+console.log("------------------5------------------");
+console.log();
+
 // A repdigit is a positive number composed out of the same digit. Create a function that takes an integer and returns whether it's a repdigit or not.
 
 // Examples
@@ -127,3 +131,48 @@ const isRepdigit = (num) => {
 isRepdigit(665);
 isRepdigit(5555);
 isRepdigit(0);
+
+console.log();
+console.log("------------------6------------------");
+console.log();
+// Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
+
+// Examples
+// minMax([1, 2, 3, 4, 5]) ➞ [1, 5]
+
+// minMax([2334454, 5]) ➞ [5, 2334454]
+
+// minMax([1]) ➞ [1, 1]
+// Notes
+// All test arrays will have at least one element and are valid.
+
+const minMax = (arr) => [Math.min(...arr), Math.max(...arr)];
+console.log(minMax([1, 2, 3, 4, 5])); // ➞ [1, 5]
+
+console.log(minMax([2334454, 5])); // ➞ [5, 2334454]
+
+console.log(minMax([1])); // ➞ [1, 1]
+
+console.log();
+console.log("------------------7------------------");
+console.log();
+// Create a function that takes an array of non-negative integers and strings and return a new array without the strings.
+
+// Examples
+// filterArray([1, 2, "a", "b"]) ➞ [1, 2]
+
+// filterArray([1, "a", "b", 0, 15]) ➞ [1, 0, 15]
+
+// filterArray([1, 2, "aasf", "1", "123", 123]) ➞ [1, 2, 123]
+// Notes
+// Zero is a non-negative integer.
+// The given array only has integers and strings.
+// Numbers in the array should not repeat.
+// The original order must be maintained.
+const filterArray = (arr) => arr.filter((el) => typeof el === "number");
+
+console.log(filterArray([1, 2, "a", "b"])); // ➞ [1, 2]
+
+console.log(filterArray([1, "a", "b", 0, 15])); // ➞ [1, 0, 15]
+
+console.log(filterArray([1, 2, "aasf", "1", "123", 123])); // ➞ [1, 2, 123]
