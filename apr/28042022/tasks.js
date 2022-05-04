@@ -26,7 +26,7 @@ console.log(humanize(302)); //"302nd"
 // console.log(alphabetize_string("United States"));
 // //"SUadeeinsttt"
 
-const alphabetize_string = (str) => str.split("").sort().join("");
+const alphabetize_string = (str) => str.split("").sort().join("").trim();
 console.log(alphabetize_string("United States"));
 
 // Write a JavaScript function to sort the following array of objects by title value.
@@ -39,18 +39,19 @@ var library = [
     libraryID: 3245,
   },
 ];
-const sortedLib = library.sort(function (a, b) {
-  if (a.title > b.title) {
-    return 1;
-  }
-  if (a.title < b.title) {
-    return -1;
-  }
-  // a должно быть равным b
-  return 0;
-});
+const sortedLib = (arr) =>
+  arr.sort(function (a, b) {
+    if (a.title > b.title) {
+      return 1;
+    }
+    if (a.title < b.title) {
+      return -1;
+    }
+    // a должно быть равным b
+    return 0;
+  });
 
-console.log(sortedLib);
+console.log(sortedLib(library));
 
 //sorted
 /*/* {
@@ -70,6 +71,15 @@ console.log(sortedLib);
 //   Write a JavaScript function to fill an array with values (numeric, string with one character) on supplied bounds.
 // console.log(num_string_range("a", "z", 2));
 // // ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]
+const numStringRange = (start, end, step) => {
+  let resultArr = [];
+
+  for (let i = start.charCodeAt(0); i < end.charCodeAt(0); i += step) {
+    resultArr.push(String.fromCharCode(i));
+  }
+  return resultArr;
+};
+console.table(numStringRange("h", "z", 1));
 
 // Zodiac sign, write a function that tells the user his/her Zodiac sign. The user should enter only his birthday like dd-mm-yy
 // for farther information check https://en.wikipedia.org/wiki/Zodiac
