@@ -24,7 +24,7 @@ console.log();
 
 // Is John older than Mark? Declare a variable with a boolean value and print the following to the console eg. "John is older than Mark: true"
 console.log("-------task 3----------");
-let isJohnOlder = true;
+let isJohnOlder = ageJohn > ageMark;
 console.log(`John is older than Mark: ${isJohnOlder}`);
 console.log();
 
@@ -61,6 +61,9 @@ console.log(goals == penalties, typeof (goals == penalties));
 console.log(goals == injuries, typeof (goals == injuries));
 console.log(penalties == injuries, typeof (penalties == injuries));
 console.log();
+let userInput;
+let iDoEat = userInput || "Like to eat";
+console.log(iDoEat);
 
 // What is the type of Infinity? Comment your answer. Print the type of infinity to the console.
 

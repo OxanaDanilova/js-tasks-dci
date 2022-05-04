@@ -30,3 +30,23 @@ for (let i = 0; i < 10; i++) {
   }
   console.log(i);
 }
+
+let color = "darkgreen";
+switch (color) {
+  case ("blue", "lightblue"):
+    console.log("This is blue");
+    break;
+  case "green":
+  case "lightgreen":
+  case "darkgreen":
+    console.log("This is green");
+    break;
+  case "black":
+    console.log("This is black");
+    break;
+  case "red":
+    console.log("This is red");
+    break;
+  default:
+    console.log("Sorry, thi color is out of our list");
+}
