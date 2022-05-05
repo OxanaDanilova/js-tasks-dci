@@ -86,16 +86,3 @@ console.log(clone2([1, 1])); // ➞ [1, 1, [1, 1]]
 console.log(clone2([1, 2, 3])); // ➞ [1, 2, 3, [1, 2, 3]]
 
 console.log(clone2(["x", "y"])); // ➞ ["x", "y", ["x", "y"]]
-
-//////////////////////          4      //////////
-console.log();
-console.log("------------");
-console.log();
-
-const clone3 = (arr) => Array.from(arr);
-
-console.log(clone3([1, 1])); // ➞ [1, 1, [1, 1]]
-
-console.log(clone3([1, 2, 3])); // ➞ [1, 2, 3, [1, 2, 3]]
-
-console.log(clone3(["x", "y"])); // ➞ ["x", "y", ["x", "y"]]
