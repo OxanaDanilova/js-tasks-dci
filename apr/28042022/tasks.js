@@ -104,3 +104,23 @@ data = [
   { signName: "Capricorn", from: "1222" },
   { signName: "Not real day!", from: "1232" },
 ];
+
+const zodiac = (str) => {
+  let arr = str.split("-");
+  const result = {
+    birthDay: arr[0],
+    birthMonth: arr[1],
+    yourZodiac: function () {
+      let monthDay = this.birthMonth + this.birthDay;
+      console.log(monthDay);
+      let i = 0;
+      while (monthDay >= data[i].from && i < data.length) {
+        i++;
+      }
+      return console.log("Your Zodiac sign is ", data[i - 1].signName);
+    },
+  };
+  console.log(arr);
+  return result.yourZodiac();
+};
+zodiac("14-02-2002");

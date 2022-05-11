@@ -117,6 +117,11 @@ calculator2("49/7*2-3"); // ➞ 11
 calculator3 = (str) => eval(str);
 calculator3("49/7*2-3"); // ➞ 11
 
+///////////calculator 4//////////
+console.log("--Calculator 4v---------");
+const calculator4 = (str) => Function(`return ${str}`)();
+console.log(calculator4("49/7*2-3")); // ➞ 11
+
 // Visa oer Master, write a function that checks if the user has entered a valid card data
 // Example:
 // 412178679036597 -> this is Visa card, I need your money
@@ -164,3 +169,4 @@ const checkPhoneNumber = (str) => {
 console.log(checkPhoneNumber("030-1247-893")); // 030-1247893 -> I'll call now
 console.log(checkPhoneNumber("333-332222")); // 333-332222 -> this is not a phone number
 console.log(checkPhoneNumber("030-33")); // 030-33 -> This is not complete !
+console.log(isNaN("030123"));
