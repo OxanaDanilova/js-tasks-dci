@@ -51,9 +51,8 @@ console.log(switchFunc2(person));
 // Examples:
 // { a: 1, b: 2, c: 3 } ➞ [["a", "b", "c"], [1, 2, 3]]
 // {key: true} ➞ [["key"], [true]]
-const totalArr = (obj) => {
-  return [Object.keys(obj), Object.values(obj)];
-};
+const totalArr = (obj) => [Object.keys(obj), Object.values(obj)];
+
 console.log(totalArr({ a: 1, b: 2, c: 3 }));
 console.log(totalArr({ key: true }));
 
@@ -69,6 +68,7 @@ const binaryFunc = (num) => num.toString(2);
 console.log(binaryFunc(20));
 console.log(binaryFunc(10));
 console.log(binaryFunc(44));
+console.log("---------Lösung2---------");
 
 // A pandigital number contains all digits (0-9) at least once. Write a function that takes an integer, returning true if the integer is pandigital, and false otherwise.
 //isPandigital(0123456789) -> true
