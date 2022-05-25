@@ -11,8 +11,7 @@ const obj = {
   },
 };
 
-const copyObj = structuredClone(obj);
-copyObj.printOut();
+const copyObj = JSON.parse(JSON.stringify(obj));
 copyObj.name = "Arkadiy";
 copyObj.address.city = "Milan";
 console.log(obj);
